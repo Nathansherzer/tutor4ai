@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Monologue vs. Dialogue — Nathan Sherzer</title>
+<meta name="description" content="Group 1 used ChatGPT freely. Group 2 used it as a tutor. Group 3 used no AI. When the AI was removed, Group 1 performed worse than Group 3. On how your kid talks to AI." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  .post-header {
+    padding: 3rem 0 2.5rem;
+    border-bottom: 3px double var(--line);
+    max-width: 720px;
+  }
+  .post-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .post-meta a { color: var(--muted); border-bottom: 1px solid rgba(100,100,100,0.3); }
+  .post-header h1 {
+    margin: 0;
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(2.6rem, 7vw, 4.5rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    color: var(--text);
+  }
+  .post-header h1 em { font-style: italic; }
+  .post-deck {
+    margin: 1.2rem 0 0;
+    font-size: 1.1rem;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 560px;
+  }
+  .post-layout {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 5rem;
+    padding: 3rem 0;
+    align-items: start;
+  }
+  .post-body {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text);
+    max-width: 640px;
+  }
+  .post-body p { margin: 0 0 1.4rem; color: #333; }
+  .post-body p:last-child { margin-bottom: 0; }
+  .post-image {
+    margin: 2rem 0 2.5rem;
+    border: 1.5px solid var(--line);
+  }
+  .post-image img {
+    display: block;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .post-image figcaption {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-top: 1px solid var(--line);
+  }
+  .study-results {
+    margin: 0 0 2rem;
+    padding: 0;
+    list-style: none;
+    border: 1.5px solid var(--line);
+  }
+  .study-results li {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    border-bottom: 1px solid rgba(17,17,17,0.1);
+    font-size: 0.95rem;
+    color: #333;
+    align-items: start;
+  }
+  .study-results li:last-child { border-bottom: none; }
+  .group-label {
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text);
+    padding-top: 0.1rem;
+  }
+  .comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5px;
+    margin: 0 0 2rem;
+    background: var(--line);
+    border: 1.5px solid var(--line);
+  }
+  .comparison-col {
+    padding: 1.4rem;
+    background: var(--bg);
+  }
+  .comparison-col h4 {
+    margin: 0 0 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .comparison-col p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  .post-body .pullquote {
+    margin: 2.5rem 0;
+    padding: 0 0 0 1.5rem;
+    border-left: 3px solid var(--accent);
+    font-family: "Instrument Serif", serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--text);
+  }
+  .post-sidebar { position: sticky; top: 5rem; }
+  .sidebar-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.6rem;
+    margin-bottom: 1rem;
+  }
+  .sidebar-author {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  .sidebar-author strong {
+    display: block;
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+  .sidebar-cta {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background: var(--text);
+    color: var(--bg);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .post-footer {
+    padding: 2.5rem 0;
+    border-top: 1.5px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .back-link {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid rgba(100,100,100,0.3);
+  }
+  @media (max-width: 860px) {
+    .post-layout { grid-template-columns: 1fr; gap: 3rem; }
+    .post-sidebar { position: static; }
+    .comparison { grid-template-columns: 1fr; }
+    .study-results li { grid-template-columns: 1fr; gap: 0.2rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page-shell">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Nathan Sherzer home">
+      <span class="brand-text">Nathan Sherzer</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav">
+      <a href="/#offer">Work</a>
+      <a href="/#process">How It Works</a>
+      <a href="/#results">Results</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/writing/">Writing</a>
+      <a class="nav-cta" href="https://wa.me/13472052957">Talk to Nathan</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="post-header">
+      <div class="post-meta">
+        <span>April 2026</span>
+        <a href="/writing/">All Writing</a>
+      </div>
+      <h1>One Builds Thinking. <em>The Other Replaces It.</em></h1>
+      <p class="post-deck">A study on AI in education split students into three groups. The results should change how every parent thinks about this.</p>
+    </div>
+
+    <div class="post-layout">
+      <article class="post-body">
+
+        <figure class="post-image">
+          <img src="emc2.jpeg" alt="E=MC2" />
+        </figure>
+
+        <p>I attended a webinar on AI in education this week. One thing really stuck with me.</p>
+
+        <p>They split students into three groups for a math study:</p>
+
+        <ul class="study-results">
+          <li>
+            <span class="group-label">Group 1</span>
+            <span>Regular ChatGPT — ask, get answer, move on.</span>
+          </li>
+          <li>
+            <span class="group-label">Group 2</span>
+            <span>ChatGPT configured as a tutor — hints and questions only, no direct answers.</span>
+          </li>
+          <li>
+            <span class="group-label">Group 3</span>
+            <span>No AI.</span>
+          </li>
+        </ul>
+
+        <p>When they removed the AI for the final test: Group 1 performed worse than the students who used no AI at all. Group 2 outperformed everyone.</p>
+
+        <p>Like using Google Maps to drive two blocks from your house. Every single day. Until the signal drops and you genuinely don't know how to get home.</p>
+
+        <p>The biggest concern parents should have is when their kids use AI in monologue mode. Ask, copy, paste. One direction. The cognitive work stays with the model.</p>
+
+        <p>Think about a history essay on Albert Einstein.</p>
+
+        <div class="comparison">
+          <div class="comparison-col">
+            <h4>Monologue</h4>
+            <p>"Write me a 300 word essay on Albert Einstein." Four minutes later, generic facts any Wikipedia page would give you. E=MC2. Genius. Changed physics. The end.</p>
+          </div>
+          <div class="comparison-col">
+            <h4>Dialogue</h4>
+            <p>"Help me understand who Einstein really was." AI asks: what surprised you about him? The kid starts digging. Discovers the man who rewrote physics couldn't remember his own phone number. Forgot his home address. Needed his wife to manage his entire life. Suddenly there's a real essay. A real opinion. Something the kid actually wants to write.</p>
+          </div>
+        </div>
+
+        <p>Same assignment. Same AI. Four minutes vs. forty. One produces a grade. The other produces a thought.</p>
+
+        <p class="pullquote">Most parents ask: is my kid using AI for homework? The better question: is my kid talking to it, or just copying from it?</p>
+
+        <p>Einstein asked more questions than he answered. If your kid's chat history looks the same, they might be following in his footsteps.</p>
+
+        <p>That's the right direction.</p>
+
+      </article>
+
+      <aside class="post-sidebar">
+        <div class="sidebar-label">About the author</div>
+        <div class="sidebar-author">
+          <strong>Nathan Sherzer</strong>
+          10+ years at the intersection of media, ad tech, and emerging technology. Former Comcast/FreeWheel, Firsthand AI. I help organizations close the gap between AI intention and execution.
+        </div>
+        <a class="sidebar-cta" href="https://wa.me/13472052957">Talk to Nathan →</a>
+      </aside>
+    </div>
+
+    <div class="post-footer">
+      <a class="back-link" href="/writing/">← All Writing</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <span class="brand-text">Nathan Sherzer</span>
+    </div>
+    <p>AI adoption advisory for media and ad tech leaders.</p>
+    <a href="mailto:nethanels@gmail.com">nethanels@gmail.com</a>
+  </footer>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>
