@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How a Fox Song Turned into a 25-Minute Deep Dive on Asteroid Mining — Nathan Sherzer</title>
+<meta name="description" content="My 9-year-old went from Morse code to asteroid mining in 25 minutes. The ChatGPT conversation was the input. The retelling was where the learning started to stick." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  .post-header {
+    padding: 3rem 0 2.5rem;
+    border-bottom: 3px double var(--line);
+    max-width: 720px;
+  }
+  .post-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .post-meta a { color: var(--muted); border-bottom: 1px solid rgba(100,100,100,0.3); }
+  .post-header h1 {
+    margin: 0;
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(2.6rem, 7vw, 4.5rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    color: var(--text);
+  }
+  .post-header h1 em { font-style: italic; }
+  .post-deck {
+    margin: 1.2rem 0 0;
+    font-size: 1.1rem;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 560px;
+  }
+  .post-layout {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 5rem;
+    padding: 3rem 0;
+    align-items: start;
+  }
+  .post-body {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text);
+    max-width: 640px;
+  }
+  .post-body p { margin: 0 0 1.4rem; color: #333; }
+  .post-body p:last-child { margin-bottom: 0; }
+  .post-image {
+    margin: 2rem 0 2.5rem;
+    border: 1.5px solid var(--line);
+  }
+  .post-image img {
+    display: block;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .rabbit-hole {
+    margin: 0 0 2rem;
+    padding: 0;
+    list-style: none;
+    border-left: 3px solid var(--accent);
+    padding-left: 1.4rem;
+  }
+  .rabbit-hole li {
+    padding: 0.5rem 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(17,17,17,0.08);
+    position: relative;
+  }
+  .rabbit-hole li:last-child { border-bottom: none; }
+  .rabbit-hole li::before {
+    content: "→";
+    position: absolute;
+    left: -1.4rem;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .post-body .pullquote {
+    margin: 2.5rem 0;
+    padding: 0 0 0 1.5rem;
+    border-left: 3px solid var(--accent);
+    font-family: "Instrument Serif", serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--text);
+  }
+  .two-line {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5px;
+    margin: 0 0 2rem;
+    background: var(--line);
+    border: 1.5px solid var(--line);
+  }
+  .two-line div {
+    padding: 1.2rem 1.4rem;
+    background: var(--bg);
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .two-line div strong {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+  }
+  .post-sidebar { position: sticky; top: 5rem; }
+  .sidebar-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.6rem;
+    margin-bottom: 1rem;
+  }
+  .sidebar-author {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  .sidebar-author strong {
+    display: block;
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+  .sidebar-cta {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background: var(--text);
+    color: var(--bg);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .post-footer {
+    padding: 2.5rem 0;
+    border-top: 1.5px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .back-link {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid rgba(100,100,100,0.3);
+  }
+  @media (max-width: 860px) {
+    .post-layout { grid-template-columns: 1fr; gap: 3rem; }
+    .post-sidebar { position: static; }
+    .two-line { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page-shell">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Nathan Sherzer home">
+      <span class="brand-text">Nathan Sherzer</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav">
+      <a href="/#offer">Work</a>
+      <a href="/#process">How It Works</a>
+      <a href="/#results">Results</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/writing/">Writing</a>
+      <a class="nav-cta" href="https://wa.me/13472052957">Talk to Nathan</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="post-header">
+      <div class="post-meta">
+        <span>June 2026</span>
+        <a href="/writing/">All Writing</a>
+      </div>
+      <h1>How a Fox Song Turned into a <em>25-Minute Deep Dive on Asteroid Mining</em></h1>
+      <p class="post-deck">Twelve listens into "What Does the Fox Say?" and I still don't know what the fox says. But my 9-year-old now knows what Morse code is.</p>
+    </div>
+
+    <div class="post-layout">
+      <article class="post-body">
+
+        <figure class="post-image">
+          <img src="fox.jpeg" alt="What Does the Fox Say" />
+        </figure>
+
+        <p>Twelve listens into "What Does the Fox Say?" and I still don't know what the fox says.</p>
+
+        <p>But my 9-year-old now knows what Morse code is. He caught a lyric I had missed: "Will you communicate by Morse?"</p>
+
+        <p>"Dad, what's Morse?"</p>
+
+        <p>I knew the basic answer. But instead of giving him the quick version, I told him to ask ChatGPT. It felt like one of those small moments where a simple question could turn into something deeper.</p>
+
+        <p>For the next 25 minutes, he kept going:</p>
+
+        <ul class="rabbit-hole">
+          <li>Morse code</li>
+          <li>Telegraphs</li>
+          <li>Undersea cables</li>
+          <li>The moon</li>
+          <li>Satellites</li>
+          <li>Asteroid mining</li>
+          <li>Who owns moon dust if two countries disagree?</li>
+        </ul>
+
+        <p>No nagging. Just question after question. Then my wife walked in and asked what he learned.</p>
+
+        <p>He started explaining it back to her. Not perfectly, and not as some polished story. But he was retrieving the information, connecting the dots, and trying to explain it in his own words.</p>
+
+        <p class="pullquote">That's the learning moment I keep thinking about.</p>
+
+        <div class="two-line">
+          <div>
+            <strong>The input</strong>
+            The ChatGPT conversation. Questions answered, rabbit holes opened.
+          </div>
+          <div>
+            <strong>Where the learning stuck</strong>
+            The retelling. Taking scattered information and turning it into something another person can understand.
+          </div>
+        </div>
+
+        <p>Taking scattered information and turning it into something another person can understand is a real skill. Maybe one of the most important ones.</p>
+
+        <p>I keep hearing AI in education framed as cheating, replacing teachers, or personalization. What I watched was different.</p>
+
+        <p>The bot answered the questions. The retelling did the teaching.</p>
+
+        <p>We talk about AI scaling output. This was AI scaling curiosity.</p>
+
+        <p>I still don't know what the fox says. I'll take it.</p>
+
+      </article>
+
+      <aside class="post-sidebar">
+        <div class="sidebar-label">About the author</div>
+        <div class="sidebar-author">
+          <strong>Nathan Sherzer</strong>
+          10+ years at the intersection of media, ad tech, and emerging technology. Former Comcast/FreeWheel, Firsthand AI. I help organizations close the gap between AI intention and execution.
+        </div>
+        <a class="sidebar-cta" href="https://wa.me/13472052957">Talk to Nathan →</a>
+      </aside>
+    </div>
+
+    <div class="post-footer">
+      <a class="back-link" href="/writing/">← All Writing</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <span class="brand-text">Nathan Sherzer</span>
+    </div>
+    <p>AI adoption advisory for media and ad tech leaders.</p>
+    <a href="mailto:nethanels@gmail.com">nethanels@gmail.com</a>
+  </footer>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>
