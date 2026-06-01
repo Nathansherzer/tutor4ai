@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Idiocracy Was a Documentary — Nathan Sherzer</title>
+<meta name="description" content="In 2006, Mike Judge made a documentary. He just didn't know it yet. On AI, General Decay, and the quiet erosion of what makes us human." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  .post-header {
+    padding: 3rem 0 2.5rem;
+    border-bottom: 3px double var(--line);
+    max-width: 720px;
+  }
+  .post-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .post-meta a { color: var(--muted); border-bottom: 1px solid rgba(100,100,100,0.3); }
+  .post-header h1 {
+    margin: 0;
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(2.6rem, 7vw, 4.5rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    color: var(--text);
+  }
+  .post-header h1 em { font-style: italic; }
+  .post-deck {
+    margin: 1.2rem 0 0;
+    font-size: 1.1rem;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 560px;
+  }
+  .post-layout {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 5rem;
+    padding: 3rem 0;
+    align-items: start;
+  }
+  .post-body {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text);
+    max-width: 640px;
+  }
+  .post-body p {
+    margin: 0 0 1.4rem;
+    color: #333;
+  }
+  .post-body p:last-child { margin-bottom: 0; }
+  .post-image {
+    margin: 2rem 0 2.5rem;
+    border: 1.5px solid var(--line);
+  }
+  .post-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .post-image figcaption {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-top: 1px solid var(--line);
+  }
+  .post-body .pullquote {
+    margin: 2.5rem 0;
+    padding: 0 0 0 1.5rem;
+    border-left: 3px solid var(--accent);
+    font-family: "Instrument Serif", serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--text);
+  }
+  .decay-list {
+    margin: 0 0 1.4rem;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0;
+    border: 1.5px solid var(--line);
+  }
+  .decay-item {
+    padding: 1.2rem 1.4rem;
+    border-bottom: 1px solid rgba(17,17,17,0.12);
+  }
+  .decay-item:last-child { border-bottom: none; }
+  .decay-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+  }
+  .decay-item p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+  .post-sidebar {
+    position: sticky;
+    top: 5rem;
+  }
+  .sidebar-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.6rem;
+    margin-bottom: 1rem;
+  }
+  .sidebar-author {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  .sidebar-author strong {
+    display: block;
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+  .sidebar-cta {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background: var(--text);
+    color: var(--bg);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .post-footer {
+    padding: 2.5rem 0;
+    border-top: 1.5px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .back-link {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid rgba(100,100,100,0.3);
+  }
+  @media (max-width: 860px) {
+    .post-layout { grid-template-columns: 1fr; gap: 3rem; }
+    .post-sidebar { position: static; }
+  }
+</style>
+</head>
+<body>
+<div class="page-shell">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Nathan Sherzer home">
+      <span class="brand-text">Nathan Sherzer</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav">
+      <a href="/#offer">Work</a>
+      <a href="/#process">How It Works</a>
+      <a href="/#results">Results</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/writing/">Writing</a>
+      <a class="nav-cta" href="https://wa.me/13472052957">Talk to Nathan</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="post-header">
+      <div class="post-meta">
+        <span>March 2026</span>
+        <a href="/writing/">All Writing</a>
+      </div>
+      <h1>Idiocracy Was a <em>Documentary</em></h1>
+      <p class="post-deck">In 2006, Mike Judge made a documentary. He just didn't know it yet. On AI, General Decay, and the quiet erosion of what makes us capable.</p>
+    </div>
+
+    <div class="post-layout">
+      <article class="post-body">
+
+        <figure class="post-image">
+          <img src="idiocracy.jpeg" alt="Idiocracy — the 2006 film by Mike Judge" />
+          <figcaption>Mike Judge, 2006</figcaption>
+        </figure>
+
+        <p>In 2006, Mike Judge made a documentary. He just didn't know it yet.</p>
+
+        <p>Idiocracy imagined a future where humanity didn't get destroyed by war or disease. It got dumb. Slowly. Comfortably. One convenience at a time.</p>
+
+        <p>I keep thinking about that movie as I watch how we're using AI.</p>
+
+        <p class="pullquote">In the age of AI, excellent is the new average.</p>
+
+        <p>In the movie, an ordinary man woke up 500 years later as the smartest person alive. He hadn't gotten smarter. Everyone else had just forgotten what smart looked like.</p>
+
+        <p>That's not a bug. It might be the whole point.</p>
+
+        <p>Everyone is focused on which jobs AI will take. But the quieter threat is something I'd call General Decay. A slow erosion across four dimensions most people aren't tracking:</p>
+
+        <ul class="decay-list">
+          <li class="decay-item">
+            <span class="decay-label">Intellectual</span>
+            <p>When AI formulates our thoughts and drafts our prose, our thinking muscles weaken. We lose the native ability to reason from first principles, construct complex arguments, make nuanced comparisons. We don't notice it happening because the output still looks smart.</p>
+          </li>
+          <li class="decay-item">
+            <span class="decay-label">Decision-Making</span>
+            <p>The will to choose is a muscle. Without the constant friction of real decisions, it gets weaker. When we stop choosing for ourselves, we quietly lose the self-reliance required to be an independent agent in our own lives.</p>
+          </li>
+          <li class="decay-item">
+            <span class="decay-label">Emotional and Social</span>
+            <p>Human connection is inherently high-friction. It involves the risk of embarrassment, the sting of rejection, the anxiety of a real "no." AI companionship removes all of that friction. So our social skills weaken. We become emotionally brittle precisely because we stopped practicing.</p>
+          </li>
+          <li class="decay-item">
+            <span class="decay-label">The Inner Self</span>
+            <p>There is something quietly devastating about working alongside a machine that is infinitely more capable than you at almost everything. Over time, your sense of contribution and self-worth can simply evaporate.</p>
+          </li>
+        </ul>
+
+        <p>Full disclosure: I didn't write this with AI. But I thought about it. That's the point.</p>
+
+        <p>Brawndo had electrolytes. ChatGPT has answers. We laughed then. Not so sure now.</p>
+
+      </article>
+
+      <aside class="post-sidebar">
+        <div class="sidebar-label">About the author</div>
+        <div class="sidebar-author">
+          <strong>Nathan Sherzer</strong>
+          10+ years at the intersection of media, ad tech, and emerging technology. Former Comcast/FreeWheel, Firsthand AI. I help organizations close the gap between AI intention and execution.
+        </div>
+        <a class="sidebar-cta" href="https://wa.me/13472052957">Talk to Nathan →</a>
+      </aside>
+    </div>
+
+    <div class="post-footer">
+      <a class="back-link" href="/writing/">← All Writing</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <span class="brand-text">Nathan Sherzer</span>
+    </div>
+    <p>AI adoption advisory for media and ad tech leaders.</p>
+    <a href="mailto:nethanels@gmail.com">nethanels@gmail.com</a>
+  </footer>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>
