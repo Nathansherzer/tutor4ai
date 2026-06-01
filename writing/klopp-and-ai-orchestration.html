@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Future of AI Work Is Not Prompting. It's Orchestration. — Nathan Sherzer</title>
+<meta name="description" content="Klopp didn't win because he had one great player. He won because he understood the role each player needed to play. Same principle. Different game." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  .post-header {
+    padding: 3rem 0 2.5rem;
+    border-bottom: 3px double var(--line);
+    max-width: 720px;
+  }
+  .post-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .post-meta a { color: var(--muted); border-bottom: 1px solid rgba(100,100,100,0.3); }
+  .post-header h1 {
+    margin: 0;
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(2.6rem, 7vw, 4.5rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    color: var(--text);
+  }
+  .post-header h1 em { font-style: italic; }
+  .post-deck {
+    margin: 1.2rem 0 0;
+    font-size: 1.1rem;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 560px;
+  }
+  .post-layout {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 5rem;
+    padding: 3rem 0;
+    align-items: start;
+  }
+  .post-body {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text);
+    max-width: 640px;
+  }
+  .post-body p { margin: 0 0 1.4rem; color: #333; }
+  .post-body p:last-child { margin-bottom: 0; }
+  .post-image {
+    margin: 2rem 0 2.5rem;
+    border: 1.5px solid var(--line);
+  }
+  .post-image img {
+    display: block;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: top;
+  }
+  .post-image figcaption {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-top: 1px solid var(--line);
+  }
+  .post-body .pullquote {
+    margin: 2.5rem 0;
+    padding: 0 0 0 1.5rem;
+    border-left: 3px solid var(--accent);
+    font-family: "Instrument Serif", serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--text);
+  }
+  .team-list {
+    margin: 0 0 2rem;
+    padding: 0;
+    list-style: none;
+    border: 1.5px solid var(--line);
+  }
+  .team-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 1rem;
+    padding: 1.2rem 1.4rem;
+    border-bottom: 1px solid rgba(17,17,17,0.1);
+    align-items: start;
+  }
+  .team-item:last-child { border-bottom: none; }
+  .team-tool {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--text);
+  }
+  .team-player {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.3rem;
+  }
+  .team-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .post-sidebar { position: sticky; top: 5rem; }
+  .sidebar-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.6rem;
+    margin-bottom: 1rem;
+  }
+  .sidebar-author {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  .sidebar-author strong {
+    display: block;
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+  .sidebar-cta {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background: var(--text);
+    color: var(--bg);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .post-footer {
+    padding: 2.5rem 0;
+    border-top: 1.5px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .back-link {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid rgba(100,100,100,0.3);
+  }
+  @media (max-width: 860px) {
+    .post-layout { grid-template-columns: 1fr; gap: 3rem; }
+    .post-sidebar { position: static; }
+    .team-item { grid-template-columns: 1fr; gap: 0.3rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page-shell">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Nathan Sherzer home">
+      <span class="brand-text">Nathan Sherzer</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav">
+      <a href="/#offer">Work</a>
+      <a href="/#process">How It Works</a>
+      <a href="/#results">Results</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/writing/">Writing</a>
+      <a class="nav-cta" href="https://wa.me/13472052957">Talk to Nathan</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="post-header">
+      <div class="post-meta">
+        <span>May 2026</span>
+        <a href="/writing/">All Writing</a>
+      </div>
+      <h1>The Future of AI Work Is Not Prompting. <em>It's Orchestration.</em></h1>
+      <p class="post-deck">Klopp didn't win because he had one great player. He won because he understood the role each player needed to play. Same principle. Different game.</p>
+    </div>
+
+    <div class="post-layout">
+      <article class="post-body">
+
+        <figure class="post-image">
+          <img src="klopp.jpeg" alt="Jürgen Klopp" />
+          <figcaption>Jürgen Klopp, Liverpool FC</figcaption>
+        </figure>
+
+        <p>The Premier League season is almost over. It has been a hard year to watch Liverpool. And Arsenal will most likely be champions. Which hurts. Though knowing them, there's still time to bottle it.</p>
+
+        <p>The more I watched this season, the more I kept thinking about how spoiled I was as a fan to have Jürgen Klopp.</p>
+
+        <p>Not because of the trophies. Because of what he built and how he built it.</p>
+
+        <p>One line from a podcast he was on has been living rent free in my head.</p>
+
+        <p class="pullquote">"How can we get the best out of people if you treat them all the same? It's crazy."</p>
+
+        <p>He treated every player differently. Not because he played favorites. Because a 22-year-old Trent Alexander-Arnold needed something completely different than a 35-year-old James Milner. One needed freedom to express himself. The other needed to know he was still trusted.</p>
+
+        <p>Uniformity, he said, is the enemy of potential.</p>
+
+        <p>I think about this every time I watch someone use AI. Most people pick one tool and use it for everything. One model. One approach. One result.</p>
+
+        <p>That's not a strategy. That's a habit.</p>
+
+        <p>Here's how I actually think about my AI team:</p>
+
+        <ul class="team-list">
+          <li class="team-item">
+            <div>
+              <span class="team-player">ChatGPT</span>
+              <span class="team-tool">Mohamed Salah</span>
+            </div>
+            <p>The name everyone knows. The one everyone downloads first. First name on the starting 11 sheet.</p>
+          </li>
+          <li class="team-item">
+            <div>
+              <span class="team-player">NotebookLM</span>
+              <span class="team-tool">Roberto Firmino</span>
+            </div>
+            <p>Does the invisible work. Takes raw material and makes it useful for everyone around him. Never in the headlines but the system works differently without him.</p>
+          </li>
+          <li class="team-item">
+            <div>
+              <span class="team-player">Perplexity</span>
+              <span class="team-tool">Andrew Robertson</span>
+            </div>
+            <p>Never stops running. Covers every inch of ground. Built for one thing and relentless at it.</p>
+          </li>
+          <li class="team-item">
+            <div>
+              <span class="team-player">Claude</span>
+              <span class="team-tool">Virgil van Dijk</span>
+            </div>
+            <p>The anchor. Everything serious gets built around him. Calm under pressure. You don't realize how much you rely on him until you are out of tokens.</p>
+          </li>
+        </ul>
+
+        <p>Klopp didn't win because he had one great player. He won because he understood the role each player needed to play.</p>
+
+        <p>Same principle. Different game.</p>
+
+        <p>The future of AI work is not prompting. It's orchestration.</p>
+
+      </article>
+
+      <aside class="post-sidebar">
+        <div class="sidebar-label">About the author</div>
+        <div class="sidebar-author">
+          <strong>Nathan Sherzer</strong>
+          10+ years at the intersection of media, ad tech, and emerging technology. Former Comcast/FreeWheel, Firsthand AI. I help organizations close the gap between AI intention and execution.
+        </div>
+        <a class="sidebar-cta" href="https://wa.me/13472052957">Talk to Nathan →</a>
+      </aside>
+    </div>
+
+    <div class="post-footer">
+      <a class="back-link" href="/writing/">← All Writing</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <span class="brand-text">Nathan Sherzer</span>
+    </div>
+    <p>AI adoption advisory for media and ad tech leaders.</p>
+    <a href="mailto:nethanels@gmail.com">nethanels@gmail.com</a>
+  </footer>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>
