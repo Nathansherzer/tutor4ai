@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Death of the "Learning Tax" — Nathan Sherzer</title>
+<meta name="description" content="Companies no longer subsidize the first two years of employment. What that means for every junior entering the workforce right now." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  .post-header {
+    padding: 3rem 0 2.5rem;
+    border-bottom: 3px double var(--line);
+    max-width: 720px;
+  }
+  .post-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .post-meta a { color: var(--muted); border-bottom: 1px solid rgba(100,100,100,0.3); }
+  .post-header h1 {
+    margin: 0;
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(2.6rem, 7vw, 4.5rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    color: var(--text);
+  }
+  .post-header h1 em { font-style: italic; }
+  .post-deck {
+    margin: 1.2rem 0 0;
+    font-size: 1.1rem;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 560px;
+  }
+  .post-layout {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 5rem;
+    padding: 3rem 0;
+    align-items: start;
+  }
+  .post-body {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text);
+    max-width: 640px;
+  }
+  .post-body p {
+    margin: 0 0 1.4rem;
+    color: #333;
+  }
+  .post-body p:last-child { margin-bottom: 0; }
+  .post-image {
+    margin: 2rem 0 2.5rem;
+    border: 1.5px solid var(--line);
+  }
+  .post-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .post-image figcaption {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-top: 1px solid var(--line);
+  }
+  .post-body ol {
+    padding-left: 1.4rem;
+    margin: 0 0 1.4rem;
+  }
+  .post-body ol li {
+    margin-bottom: 0.8rem;
+    color: #333;
+    line-height: 1.7;
+  }
+  .post-body .pullquote {
+    margin: 2.5rem 0;
+    padding: 0 0 0 1.5rem;
+    border-left: 3px solid var(--accent);
+    font-family: "Instrument Serif", serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--text);
+  }
+  .post-sidebar {
+    position: sticky;
+    top: 5rem;
+  }
+  .sidebar-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.6rem;
+    margin-bottom: 1rem;
+  }
+  .sidebar-author {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  .sidebar-author strong {
+    display: block;
+    color: var(--text);
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+  }
+  .sidebar-cta {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background: var(--text);
+    color: var(--bg);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .post-footer {
+    padding: 2.5rem 0;
+    border-top: 1.5px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .back-link {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid rgba(100,100,100,0.3);
+  }
+  @media (max-width: 860px) {
+    .post-layout { grid-template-columns: 1fr; gap: 3rem; }
+    .post-sidebar { position: static; }
+  }
+</style>
+</head>
+<body>
+<div class="page-shell">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Nathan Sherzer home">
+      <span class="brand-text">Nathan Sherzer</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav">
+      <a href="/#offer">Work</a>
+      <a href="/#process">How It Works</a>
+      <a href="/#results">Results</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/writing/">Writing</a>
+      <a class="nav-cta" href="mailto:nethanels@gmail.com">Talk to Nathan</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="post-header">
+      <div class="post-meta">
+        <span>February 2026</span>
+        <a href="/writing/">All Writing</a>
+      </div>
+      <h1>The Death of the <em>"Learning Tax"</em></h1>
+      <p class="post-deck">Companies no longer subsidize the first two years of employment. What that means for every junior entering the workforce right now.</p>
+    </div>
+
+    <div class="post-layout">
+      <article class="post-body">
+        <p>Yesterday, right before the blizzard shut everything down, I got on a Google Meet with a recent college grad. The daughter of my kids' math tutor. Her dad had reached out asking if I'd be willing to spend some time with her. She wants to become a data scientist. She's applied everywhere. She's now open to unpaid internships.</p>
+
+        <p>I looked at her resume beforehand. One line stuck with me: "Proficient in SUMIF, and VLOOKUP."</p>
+
+        <figure class="post-image">
+          <img src="learning-tax-diagram.png" alt="The Death of the Learning Tax — diagram showing companies no longer subsidize the first two years of employment" />
+          <figcaption>The deal that's been broken</figcaption>
+        </figure>
+
+        <p>Here's the thing. AI tools can now do that inside Excel without knowing the formula. Not approximately. Right now.</p>
+
+        <p>And that's when I realized I wasn't looking at a resume problem. I was looking at the collapse of a deal that's been running entry-level hiring for decades.</p>
+
+        <p>The old deal was simple. Companies hired juniors for cheap labor. Juniors did grunt work and in exchange, the company subsidized their learning. You do the boring stuff. We pay you while you figure things out.</p>
+
+        <p>AI broke that deal. If a model can handle the grunt work instantly and for free, why would a company pay a human to learn how to do it?</p>
+
+        <p class="pullquote">The question facing every junior right now isn't "how do I compete with more experienced candidates?" It's "how do I compete with free?"</p>
+
+        <p>I showed her some slides I'd put together on this. She went quiet. I could tell she didn't know what to say. No one had framed it this way for her before.</p>
+
+        <p>But here's where the conversation got useful.</p>
+
+        <p>Juniors have one advantage over everyone already in the workforce that almost none of them are leveraging: time.</p>
+
+        <p>People who've been at a company long enough are context-rich but time-poor. Buried in meetings and deadlines. They adopt AI tools just enough to be functional, rarely enough to be fluent.</p>
+
+        <p>Juniors have the opposite problem. Time rich, context-poor. And that surplus of time is exactly what mastering AI demands. Learning which model fits which task, how to prompt well, how to chain tools together, how to catch when the model is confidently wrong. This is a craft that rewards obsessive, uninterrupted focus. And frankly, most people with a full-time job just don't have that kind of time.</p>
+
+        <p>Before we hung up I told her three things:</p>
+
+        <ol>
+          <li>Find one AI newsletter that meets you where you are. Not the hype stuff. Something that teaches you to actually use the tools.</li>
+          <li>Take these slides and share them with your friends in the same boat. Most of them are facing this exact problem and don't have the language for it yet.</li>
+          <li>Build a learning community with those friends. Not a study group. A practice group for the craft that will define your careers.</li>
+        </ol>
+
+        <p>After we hung up I kept thinking about it. This wasn't just about one person's job search. Her college probably left her with six figures of student debt and didn't prepare her for the most fundamental shift in how work gets done. That part genuinely frustrated me.</p>
+
+        <p>The underlying shift is simple: juniors used to sell effort. Now they need to sell leverage.</p>
+      </article>
+
+      <aside class="post-sidebar">
+        <div class="sidebar-label">About the author</div>
+        <div class="sidebar-author">
+          <strong>Nathan Sherzer</strong>
+          10+ years at the intersection of media, ad tech, and emerging technology. Former Comcast/FreeWheel, Firsthand AI. I help organizations close the gap between AI intention and execution.
+        </div>
+        <a class="sidebar-cta" href="mailto:nethanels@gmail.com">Talk to Nathan →</a>
+      </aside>
+    </div>
+
+    <div class="post-footer">
+      <a class="back-link" href="/writing/">← All Writing</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <span class="brand-text">Nathan Sherzer</span>
+    </div>
+    <p>AI adoption advisory for media and ad tech leaders.</p>
+    <a href="mailto:nethanels@gmail.com">nethanels@gmail.com</a>
+  </footer>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>

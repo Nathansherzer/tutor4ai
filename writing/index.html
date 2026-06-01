@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Writing — Nathan Sherzer</title>
+<meta name="description" content="Nathan Sherzer writes about AI adoption, organizational change, and the gap between intention and execution in media and ad tech." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  .writing-header {
+    padding: 3rem 0 2rem;
+    border-bottom: 3px double var(--line);
+    margin-bottom: 0;
+  }
+  .writing-header p {
+    margin: 0.5rem 0 0;
+    color: var(--muted);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .writing-header h1 {
+    margin: 0.4rem 0 0;
+    font-family: "Instrument Serif", serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--text);
+  }
+  .post-list {
+    display: grid;
+    gap: 0;
+    border-bottom: 1.5px solid var(--line);
+  }
+  .post-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(17,17,17,0.12);
+    text-decoration: none;
+    color: var(--text);
+    transition: background 120ms ease;
+  }
+  .post-item:last-child { border-bottom: none; }
+  .post-item:hover { background: var(--surface); margin: 0 -1rem; padding-left: 1rem; padding-right: 1rem; }
+  .post-date {
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding-top: 0.3rem;
+  }
+  .post-copy h2 {
+    margin: 0 0 0.5rem;
+    font-family: "Instrument Serif", serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--text);
+  }
+  .post-copy p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .post-read {
+    display: inline-block;
+    margin-top: 0.8rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text);
+    border-bottom: 1.5px solid var(--text);
+  }
+  @media (max-width: 640px) {
+    .post-item { grid-template-columns: 1fr; gap: 0.5rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page-shell">
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Nathan Sherzer home">
+      <span class="brand-text">Nathan Sherzer</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav">
+      <a href="/#offer">Work</a>
+      <a href="/#process">How It Works</a>
+      <a href="/#results">Results</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/writing/">Writing</a>
+      <a class="nav-cta" href="mailto:nethanels@gmail.com">Talk to Nathan</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="writing-header">
+      <p>From the field</p>
+      <h1>Writing</h1>
+    </div>
+
+    <div class="post-list">
+      <a class="post-item" href="/writing/the-death-of-the-learning-tax.html">
+        <span class="post-date">Feb 2026</span>
+        <div class="post-copy">
+          <h2>The Death of the "Learning Tax"</h2>
+          <p>Companies no longer subsidize the first two years of employment. What that means for every junior entering the workforce right now.</p>
+          <span class="post-read">Read →</span>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <span class="brand-text">Nathan Sherzer</span>
+    </div>
+    <p>AI adoption advisory for media and ad tech leaders.</p>
+    <a href="mailto:nethanels@gmail.com">nethanels@gmail.com</a>
+  </footer>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>
